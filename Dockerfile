@@ -5,7 +5,7 @@ RUN apt-get update \
     && rm -rf /var/lib/apt/lists/*
 
 RUN pip install -U flask \
-    && pip install -U flask-cors
+    && pip install -U flask-cors \
     && pip install -U gomill
 
 RUN git clone https://github.com/shoutan-go/gnugo-as-a-service.git /opt/gnugo-as-a-service
