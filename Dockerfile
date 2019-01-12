@@ -8,9 +8,7 @@ RUN pip install -U flask \
     && pip install -U flask-cors \
     && pip install -U gomill
 
-RUN git clone https://github.com/shoutan-go/gnugo-as-a-service.git /opt/gnugo-as-a-service
-
-WORKDIR /opt/gnugo-as-a-service
+WORKDIR /usr/src
 
 EXPOSE 5000
 CMD ["python","gnugo-as-a-service.py","--host","0.0.0.0","--port","5000"]
